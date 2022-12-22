@@ -2,6 +2,9 @@
   "name": "axies-reactjs",
   "homepage": "https://axiesreact.surielementor.com",
   "version": "1.0.1",
+  "engines": {
+    "node": "18.x"
+  },
   "private": true,
   "dependencies": {
     "@rarible/connector": "^0.13.2",
