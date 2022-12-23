@@ -54,7 +54,6 @@ import Web3Modal from "web3modal";
         if (wallet_AccessToken) {
           localStorage.removeItem('wallet_AccessToken')
           alert('Wallet is disconnected')
-          console.log(wallet_AccessToken);
           return undefined
         }
       } catch (error) {
