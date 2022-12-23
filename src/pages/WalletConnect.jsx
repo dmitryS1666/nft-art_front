@@ -27,7 +27,8 @@ const WalletConnect = () => {
     }, [])
 
     const connectWallet = () => {
-        setWallet(connectNewWallet())
+        connectNewWallet()
+        .then(res => res ? setWallet(res) : setWallet(''))
         
     }
 

@@ -40,12 +40,18 @@ import Web3Modal from "web3modal";
 //   };
 
   export const connectNewWallet = async ( ) => {
-    const newWallet = await window.ethereum.request({ method: "eth_requestAccounts" })
-    if(newWallet) {
-        alert('Metamask is connected')
+    
+    try {
+      const newWallet = await window.ethereum.request({ method: "eth_requestAccounts" })
+      if(newWallet) {
+        localStorage.setItem('wallet_AccessToken', newWallet[0])
+        return newWallet
+          alert('Metamask is connected')
+      }
+    } catch (error) {
+      alert(error.message)
     }
-    localStorage.setItem('wallet_AccessToken', newWallet[0])
-    return newWallet
+    
   }
 
   export const disconnectCurrentWallet = () => {
