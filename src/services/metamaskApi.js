@@ -3,9 +3,9 @@ import { createRaribleSdk } from "@rarible/sdk";
 import { EthereumWallet } from "@rarible/sdk-wallet";
 import { toOrderId} from "@rarible/types"
 import { Web3Ethereum } from "@rarible/web3-ethereum"
-// import WalletConnectProvider from "@walletconnect/web3-provider";
+import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3 from "web3";
-// import Web3Modal from "web3modal";
+import Web3Modal from "web3modal";
 
 // let web3;
 // let accounts = [];
