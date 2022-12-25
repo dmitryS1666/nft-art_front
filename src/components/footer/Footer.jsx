@@ -4,43 +4,44 @@ import logodark from '../../assets/images/logo/logo_dark.png'
 import logofooter from '../../assets/images/logo/logo2.png'
 const Footer = () => {
     const resourcesList = [
+        // {
+        //     title: "Help & Support",
+        //     link: "/help-center"
+        // },
         {
-            title: "Help & Support",
-            link: "/help-center"
-        },
-        {
-            title: "Explore",
+            title: "Лоты",
             link: "/explore"
         }
     ]
     const companyList = [
 
         {
-            title: "Contact Us",
-            link: "/contact-01"
+            title: "О нас",
+            link: "/contact"
         },
+
         {
-            title: "FAQ",
+            title: "Команда",
             link: "/faq"
         }
     ]
     const socialList = [
-        {
-            icon: "fab fa-twitter",
-            link: "#"
-        },
+        // {
+        //     icon: "fab fa-twitter",
+        //     link: "#"
+        // },
         {
             icon: "fab fa-telegram-plane",
-            link: "#"
-        },
-        {
-            icon: "fab fa-youtube",
-            link: "#"
-        },
-        {
-            icon: "icon-fl-tik-tok-2",
-            link: "#"
-        }
+            link: "https://t.me/ntartkids"
+        }//,
+        // {
+        //     icon: "fab fa-youtube",
+        //     link: "#"
+        // },
+        // {
+        //     icon: "icon-fl-tik-tok-2",
+        //     link: "#"
+        // }
     ]
 
     const [isVisible, setIsVisible] = useState(false);
@@ -51,7 +52,7 @@ const Footer = () => {
         behavior: "smooth"
       });
     };
-  
+
     useEffect(() => {
       const toggleVisibility = () => {
         if (window.pageYOffset > 500) {
@@ -60,13 +61,13 @@ const Footer = () => {
           setIsVisible(false);
         }
       };
-  
+
       window.addEventListener("scroll", toggleVisibility);
-  
+
       return () => window.removeEventListener("scroll", toggleVisibility);
     }, []);
 
-      
+
     return (
         <div>
             <footer id="footer" className="footer-light-style clearfix bg-style">
@@ -78,15 +79,24 @@ const Footer = () => {
                                     <Link to="/">
                                         <img className='logo-dark' id="logo_footer" src={logodark} alt="nft-gaming" />
                                         <img className='logo-light' id="logo_footer" src={logofooter} alt="nft-gaming" />
-                                        
                                     </Link>
                                 </div>
-                                <p className="sub-widget-logo">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</p>
+                                <p className="sub-widget-logo">Лучшее будущее зависит от гениальных детей. Давайте вместе раскроем их потенциал!</p>
+                                <div className="widget-social style-1 mg-t32">
+                                    {/*    <h6 className="title-widget">Социальные сети</h6>*/}
+                                    <ul>
+                                        {
+                                            socialList.map((item,index) =>(
+                                                <li key={index}><Link to={item.link}><i className={item.icon}></i></Link></li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-4 col-sm-7 col-7">
                             <div className="widget widget-menu style-2">
-                                <h5 className="title-widget">Resources</h5>
+                                <h5 className="title-widget">Коллекции</h5>
                                 <ul>
                                     {
                                         resourcesList.map((item,index) =>(
@@ -98,7 +108,7 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-2 col-md-4 col-sm-5 col-5">
                             <div className="widget widget-menu fl-st-3">
-                                <h5 className="title-widget">Company</h5>
+                                <h5 className="title-widget">О нас</h5>
                                 <ul>
                                     {
                                         companyList.map((item,index) =>(
@@ -108,23 +118,23 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6 col-sm-7 col-12">
+                        <div className="col-lg-4 col-md-6 col-sm-7 col-12">
                             <div className="widget widget-subcribe">
-                                <h5 className="title-widget">Subscribe Us</h5>
-                                <div className="form-subcribe">
-                                    <form id="subscribe-form" action="#" method="GET" acceptCharset="utf-8" className="form-submit">
-                                        <input name="email"  className="email" type="email" placeholder="info@yourgmail.com" required />
-                                        <button id="submit" name="submit" type="submit"><i className="icon-fl-send"></i></button>
-                                    </form>
-                                </div>
-                                <div className="widget-social style-1 mg-t32">
-                                    <ul>
-                                        {
-                                            socialList.map((item,index) =>(
-                                                <li key={index}><Link to={item.link}><i className={item.icon}></i></Link></li>
-                                            ))
-                                        }
-                                    </ul>
+                                <h5 className="title-widget">Контакты</h5>
+                                {/*<div className="form-subcribe">*/}
+                                {/*    <form id="subscribe-form" action="#" method="GET" acceptCharset="utf-8" className="form-submit">*/}
+                                {/*        <input name="email"  className="email" type="email" placeholder="info@yourgmail.com" required />*/}
+                                {/*        <button id="submit" name="submit" type="submit"><i className="icon-fl-send"></i></button>*/}
+                                {/*    </form>*/}
+                                {/*</div>*/}
+                                <div>
+                                    <p>ИП Никитина Наталья Геннадиевна УНП 192514683</p>
+                                    <p>222847 Минская обл. Пуховичский р-н, п. Марьино , ул Садовая 27</p>
+                                    <p>р/с BY49BAPB30139011600100000000</p>
+                                    <p>ОАО «Белагропромбанк» ЦБУ No 549</p>
+                                    <p>Г. Марьина Горка, ул. Ленинская, дом 54</p>
+                                    <p>КОД BAPBBY2X</p>
+                                    <p>Телефон: 8(025)950 74 27</p>
                                 </div>
                             </div>
                         </div>
@@ -132,10 +142,10 @@ const Footer = () => {
                 </div>
             </footer>
             {
-                isVisible && 
+                isVisible &&
                 <Link onClick={scrollToTop}  to='#' id="scroll-top"></Link>
             }
-            
+
             <div className="modal fade popup" id="popup_bid" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">

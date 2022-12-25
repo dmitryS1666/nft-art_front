@@ -8,26 +8,26 @@ import icon4 from '../../assets/images/icon/Bookmark.png'
 const Create = () => {
     const data = [
         {
-            title: "Set Up Your Wallet",
-            description: "Wallet that is functional for NFT purchasing. You may have a Coinbase account at this point, but very few are actually set up to buy an NFT.",
+            title: "Подключайте свой кошелек",
+            description: "Кошелек, который работает для покупки NFT. На данный момент у вас может быть учетная запись Metamask, но очень немногие на самом деле настроены для покупки NFT.",
             icon : icon1,
             colorbg : "icon-color1"
         },
         {
-            title: "Create Your Collection",
-            description: "Setting up your NFT collection and creating NFTs on NFTs is easy! This guide explains how to set up your first collection",
+            title: "Создавайте свои коллекции",
+            description: "Создать свою коллекцию NFT и создать NFT очень просто!",
             icon : icon2,
             colorbg : "icon-color2"
         },
         {
-            title: "Add Your NFTs",
-            description: "Sed ut perspiciatis un de omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.",
+            title: "Добавляйте NFT",
+            description: "Создавайте, творите и добавляйте новые NFT в свои коллекции",
             icon : icon3,
             colorbg : "icon-color3"
         },
         {
-            title: "List Them For Sale",
-            description: "Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs!",
+            title: "Выставляйте их для продажи",
+            description: "Выбирайте между аукционами, листингами с фиксированной ценой и листингами со снижающимися ценами. Вы сами выбираете, как вы хотите продавать свои NFT!",
             icon : icon4,
             colorbg : "icon-color4"
         },
@@ -39,7 +39,7 @@ const Create = () => {
                     <div className="col-md-12">
                         <div className="heading-live-auctions mg-bt-22">
                             <h2 className="tf-title pb-17">
-                                Create And Sell Your NFTs</h2>                         
+                                Создавайте и продавайте свои NFT</h2>
                         </div>
                     </div>
                     {

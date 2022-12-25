@@ -18,7 +18,7 @@ const PopularCollection = props => {
                     <div className="col-md-12">
                         <div className="heading-live-auctions">
                             <h2 className="tf-title pb-22 text-left">
-                                Popular Collection</h2>
+                                Популярные коллекции</h2>
                             {/*<Link to="/explore-03" className="exp style2">EXPLORE MORE</Link>*/}
                         </div>
                     </div>
@@ -89,7 +89,7 @@ const PopularCollectionItem = props => (
                                 <div className="content">
                                     <h4><Link to={`/authors-${props.item.collectionId}`}>{props.item.name}</Link></h4>
                                     <div className="infor">
-                                        <span>Created by</span>
+                                        <span>Создано</span>
                                         <span className="name"><Link to="/authors-02">{props.item.owner}</Link></span>
                                     </div>
                                 </div>

@@ -112,7 +112,7 @@ const HelpCenter = () => {
                                         <img src={item.icon} alt="Axies" />
                                     </div>
                                 </div>
-                                <h4 className="heading"><Link to="/contact-01">{item.title}</Link> </h4>
+                                <h4 className="heading"><Link to="/contact">{item.title}</Link> </h4>
                                 <p className="content">{item.description}</p>
                             </div>
                             ))
