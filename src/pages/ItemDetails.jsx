@@ -101,13 +101,13 @@ const ItemDetails = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="page-title-heading mg-bt-12">
-                                <h1 className="heading text-center">Details #1</h1>
+                                <h1 className="heading text-center">{item.name}</h1>
                             </div>
                             <div className="breadcrumbs style2">
                                 <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="#">Explore</Link></li>
-                                    <li>Details #1</li>
+                                    <li><Link to="/">Главная</Link></li>
+                                    <li><Link to="/explore">Лоты</Link></li>
+                                    <li>{item.name}</li>
                                 </ul>
                             </div>
                         </div>

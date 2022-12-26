@@ -31,7 +31,7 @@ const LiveAuction = props => {
                     {
                         visible < data.length && 
                         <div className="col-md-12 wrap-inner load-more text-center"> 
-                            <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
+                            <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Загрузить больше</span></Link>
                         </div>
                     }
                 </div>

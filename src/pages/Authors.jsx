@@ -512,12 +512,12 @@ const Authors = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="page-title-heading mg-bt-12">
-                                <h1 className="heading text-center">Author</h1>
+                                <h1 className="heading text-center">Автор</h1>
                             </div>
                             <div className="breadcrumbs style2">
                                 <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li>Author</li>
+                                    <li><Link to="/">Главная</Link></li>
+                                    <li>Автор</li>
                                 </ul>
                             </div>
                         </div>
@@ -608,7 +608,7 @@ const Authors = () => {
                   className="sc-button loadmore fl-button pri-3"
                   onClick={showMoreItems}
                 >
-                  <span>Load More</span>
+                  <span>Загрузить больше</span>
                 </Link>
               </div>
             )}

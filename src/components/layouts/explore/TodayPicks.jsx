@@ -149,7 +149,7 @@ const TodayPicks = (props) => {
                   className="sc-button loadmore fl-button pri-3"
                   onClick={showMoreItems}
                 >
-                  <span>Load More</span>
+                  <span>Загрузить больше</span>
                 </Link>
               </div>
             )}
