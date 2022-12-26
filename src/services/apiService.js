@@ -3,26 +3,27 @@ import axios from "axios";
 const BASE_URL = "https://api.rarible.org/v0.1/";
 
 export const translateItemData = async (items, collectionData) => {
-        const result = await items.map( item => {
-            return {
-                id: item.id,
-                name: item.meta.name.slice(0, 22),
-                description: item.meta.description,
-                img: item.meta.content[0].url,
-                tags: item.meta.tags.length > 0 ? item.meta.tags : 'bsc',
-                price: '5 ETH',
-                priceChange: ' 2500 $',
-                wishlist: "100",
-                imgAuthor: '/assets/icon/profileTest.png',
-                collectionId: item.collection,
-                collectionName: collectionData.name,
-                collectionImg: collectionData?.meta.content[0].url,
-                nameAuthor: collectionData.meta.name
-            }
-        })
-        
-        return result
-}   
+    const result = await items.map( item => {
+        // debugger
+        return {
+            id: item.id,
+            name: item.meta.name.slice(0, 22),
+            description: item.meta.description,
+            img: item.meta.content[0].url,
+            tags: item.meta.tags.length > 0 ? item.meta.tags : 'bsc',
+            price: '5 ETH',
+            priceChange: ' 2500 $',
+            wishlist: "100",
+            imgAuthor: '/assets/icon/profileTest.png',
+            collectionId: item.collection,
+            collectionName: collectionData.name,
+            collectionImg: collectionData?.meta?.content[0]?.url,
+            nameAuthor: collectionData?.meta.name
+        }
+    })
+
+    return result
+}
 
 export const translateCollectionsFromId = async (items) => {
     // const result = await items.map (item => getItemsByCollectionId(item.id, 6)
@@ -31,14 +32,14 @@ export const translateCollectionsFromId = async (items) => {
 }
 
 export const getCollectionsArrayFromId = async (array) => {
-        let stateAr = []
-        await array.map(id => getItemsByCollectionId(id, 6).then(res => stateAr.push(translateItemData(res, id))))
-        
-        console.log(stateAr);
+    let stateAr = []
+    await array.map(id => getItemsByCollectionId(id, 6).then(res => stateAr.push(translateItemData(res, id))))
+
+    console.log(stateAr);
     // return await newArray
 }
 
-export const getItemsByCollectionId = async (collectionId = "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430", itemsQty = 16) => {
+export const getItemsByCollectionId = async (collectionId = "ETHEREUM:0x72eb1e49eded40189e7abeeca33c9deca1d1f4d5", itemsQty = 16) => {
     try {
         const collectionData = await getCollectionById(collectionId)
         const res = await axios.get(`${BASE_URL}items/byCollection?collection=${collectionId}&size=${itemsQty}`)
@@ -46,7 +47,7 @@ export const getItemsByCollectionId = async (collectionId = "ETHEREUM:0xd07dc426
     } catch (error) {
         console.log(error);
     }
-} 
+}
 
 export const  getItemById = async (itemId) => {
     try {
@@ -83,8 +84,8 @@ export const getCollectionById = async (collectionId="0xd07dc4262bcdbf85190c01c9
 
 export const getPopularCollectionIds = async (collectionQty = 20, period='D7') => {
     try {
-       const res = await axios.get(`${BASE_URL}data/trending/collections?limit=${collectionQty}&blockchain=ETHEREUM&period=${period}`)
-       const randomCollections = await getRandomElements(12, res.data)
+        const res = await axios.get(`${BASE_URL}data/trending/collections?limit=${collectionQty}&blockchain=ETHEREUM&period=${period}`)
+        const randomCollections = await getRandomElements(12, res.data)
         const newCollection  = await translateCollectionsFromId(randomCollections)
         return getCollectionsArrayFromId(newCollection)
 

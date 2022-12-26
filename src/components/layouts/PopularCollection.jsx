@@ -18,37 +18,37 @@ const PopularCollection = props => {
                     <div className="col-md-12">
                         <div className="heading-live-auctions">
                             <h2 className="tf-title pb-22 text-left">
-                                Популярные коллекции</h2>
+                                Popular Collection</h2>
                             {/*<Link to="/explore-03" className="exp style2">EXPLORE MORE</Link>*/}
                         </div>
                     </div>
                     <div className="col-md-12">
                         <div className="collection">
-                        <Swiper
-                            modules={[Navigation, Scrollbar, A11y]}
-                            spaceBetween={30}
-                            breakpoints={{
-                                0: {
-                                    slidesPerView: 1,
-                                  },
-                                767: {
-                                  slidesPerView: 2,
-                                },
-                                991: {
-                                  slidesPerView: 3,
-                                },
-                              }}
-                            scrollbar={{ draggable: true }}
-                        >
-                            {
-                                data.map((item,index) => (
-                                    <SwiperSlide key={index}>
-                                        <PopularCollectionItem item={item} collection={data}/>
-                                    </SwiperSlide>
-                                ))
-                            }
-                        </Swiper>
-                        </div>    
+                            <Swiper
+                                modules={[Navigation, Scrollbar, A11y]}
+                                spaceBetween={30}
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
+                                    },
+                                    767: {
+                                        slidesPerView: 2,
+                                    },
+                                    991: {
+                                        slidesPerView: 3,
+                                    },
+                                }}
+                                scrollbar={{ draggable: true }}
+                            >
+                                {
+                                    data.map((item,index) => (
+                                        <SwiperSlide key={index}>
+                                            <PopularCollectionItem item={item} collection={data}/>
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,18 +63,18 @@ const PopularCollectionItem = props => (
     <div className="swiper-container show-shadow carousel4 button-arow-style">
         <div className="swiper-wrapper">
             <div className="swiper-slide">
-                <div className="slider-item">										
+                <div className="slider-item">
                     <div className="sc-card-collection style-3">
                         <Link to={`/authors-${props.item.collectionId}`}>
                             <div className="media-images-box">
                                 <div className="top-media">
-                                    <img src={props.collection[0].img} alt="Axies" />
-                                    <img src={props.collection[1].img} alt="Axies" />
-                                    </div>
+                                    <img src={props.collection[0]?.img} alt="Axies" />
+                                    <img src={props.collection[1]?.img} alt="Axies" />
+                                </div>
                                 <div className="bottom-media">
-                                    <img src={props.collection[2].img} alt="Axies" />
-                                    <img src={props.collection[3].img} alt="Axies" />
-                                    <img src={props.collection[4].img} alt="Axies" />
+                                    <img src={props.collection[2]?.img} alt="Axies" />
+                                    <img src={props.collection[3]?.img} alt="Axies" />
+                                    <img src={props.collection[4]?.img} alt="Axies" />
                                 </div>
                             </div>
                         </Link>
@@ -89,17 +89,17 @@ const PopularCollectionItem = props => (
                                 <div className="content">
                                     <h4><Link to={`/authors-${props.item.collectionId}`}>{props.item.name}</Link></h4>
                                     <div className="infor">
-                                        <span>Создано</span>
+                                        <span>Created by</span>
                                         <span className="name"><Link to="/authors-02">{props.item.owner}</Link></span>
                                     </div>
                                 </div>
                             </div>
                             <Link to="/login" className="wishlist-button public heart"><span className="number-like">{props.item.wishlist}</span></Link>
                         </div>
-                    </div> 	
+                    </div>
                 </div>
             </div>
-        </div>                            
+        </div>
     </div>
 )
 

@@ -41,6 +41,8 @@ const Header = () => {
         setActiveIndex(index);
     };
 
+    const [wallet] = useState('')
+
     return (
         <header id="header_main" className="header_1 js-header" ref={headerRef}>
             <div className="themesflat-container">
@@ -98,8 +100,11 @@ const Header = () => {
                                         </div>
                                     </div>
                                     <div className="sc-btn-top mg-r-12" id="site-header">
-                                        <Link to="/wallet-connect" className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
-                                        </span></Link>
+                                        <Link to="/wallet-connect" className="sc-button header-slider style style-1 wallet fl-button pri-1">
+                                            <span>
+                                                    {wallet ? 'Отключить кошелёк' : 'Подключить кошелёк'}
+                                            </span>
+                                        </Link>
                                     </div>
 
                                     <div className="admin_active" id="header_admin">

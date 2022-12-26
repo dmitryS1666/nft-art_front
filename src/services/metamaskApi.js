@@ -59,11 +59,11 @@ import Web3 from "web3";
         const wallet_AccessToken = localStorage.getItem('wallet_AccessToken')
         if (wallet_AccessToken) {
           localStorage.removeItem('wallet_AccessToken')
-          alert('Wallet is disconnected')
+          alert('Кошелёк отключен')
           return undefined
         }
       } catch (error) {
-        alert('Something wen wrong', error)
+        alert('Что-то пошло не так', error)
       }
   }
 

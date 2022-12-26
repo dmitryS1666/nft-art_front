@@ -48,7 +48,6 @@ const FAQ = () => {
                             <div className="breadcrumbs style2">
                                 <ul>
                                     <li><Link to="/">Главная</Link></li>
-                                    <li><Link to="#">Pages</Link></li>
                                     <li>FAQ</li>
                                 </ul>
                             </div>

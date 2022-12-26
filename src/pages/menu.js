@@ -1,9 +1,9 @@
 const menus = [
-    {
-        id: 1,
-        name: 'Главная',
-        links: '/'
-    },
+    // {
+    //     id: 1,
+    //     name: 'Главная',
+    //     links: '/'
+    // },
     {
         id: 2,
         name: 'Коллекции',
@@ -17,7 +17,7 @@ const menus = [
             {
                 id: 2,
                 sub: 'Авторы',
-                links: '/authors-ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430'
+                links: '/authors-ETHEREUM:0x72eb1e49eded40189e7abeeca33c9deca1d1f4d5'
             },
             {
                 id: 3,
@@ -31,10 +31,15 @@ const menus = [
             // }
         ]
     },
+    // {
+    //     id: 7,
+    //     name: 'Контакты',
+    //     links: '/contact'
+    // },
     {
-        id: 7,
-        name: 'Контакты',
-        links: '/contact'
+        id: 8,
+        name: 'О нас',
+        links: '/about'
     }
 ]
 

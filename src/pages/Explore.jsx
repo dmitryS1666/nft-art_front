@@ -20,6 +20,7 @@ const Explore = () => {
     const getItems = (collectionId, itemsQty) => {
         getItemsByCollectionId(collectionId, itemsQty)
         .then(res => {
+            console.log(res);
             if(res.length > 0) {
                 setCurrentCollection(res)
             }

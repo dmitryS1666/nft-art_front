@@ -17,12 +17,12 @@ const Footer = () => {
 
         {
             title: "О нас",
-            link: "/contact"
+            link: "/about"
         },
 
         {
             title: "Команда",
-            link: "/faq"
+            link: "/team"
         }
     ]
     const socialList = [
@@ -87,7 +87,7 @@ const Footer = () => {
                                     <ul>
                                         {
                                             socialList.map((item,index) =>(
-                                                <li key={index}><Link to={item.link}><i className={item.icon}></i></Link></li>
+                                                <li key={index}><a href={item.link}><i className={item.icon}></i></a></li>
                                             ))
                                         }
                                     </ul>

@@ -6,6 +6,8 @@ import Authors from "./Authors";
 import WalletConnect from "./WalletConnect";
 import FAQ from "./FAQ";
 import Contact from "./Contact";
+import About from "./About";
+import Team from "./Team";
 
 
 const routes = [
@@ -17,6 +19,8 @@ const routes = [
   { path: '/wallet-connect', component: <WalletConnect />},
   { path: '/faq', component: <FAQ />},
   { path: '/contact', component: <Contact />},
+  { path: '/about', component: <About />},,
+  { path: '/team', component: <Team />},
 ]
 
 export default routes;
