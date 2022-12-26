@@ -2,6 +2,7 @@ import React, { useState ,useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import logodark from '../../assets/images/logo/logo_dark.png'
 import logofooter from '../../assets/images/logo/logo2.png'
+import logoinaweb from '../../assets/images/svg/inaweb.svg'
 const Footer = () => {
     const resourcesList = [
         // {
@@ -135,6 +136,17 @@ const Footer = () => {
                                     <p>Г. Марьина Горка, ул. Ленинская, дом 54</p>
                                     <p>КОД BAPBBY2X</p>
                                     <p>Телефон: 8(025)950 74 27</p>
+                                    <a href="https://inaweb.by">
+                                        <img className='logo-light' style={{
+                                            width: 160+
+                                            'px',
+                                            height: 70+
+                                            'px',
+                                            display: 'block'
+                                        }}
+                                             id="logo_footer"
+                                             src={logoinaweb} alt="nft-gaming" />
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -25,15 +25,13 @@ const SliderStyle4 = () => {
                 <div className="themesflat-container ">
                         <div className="wrap-heading flat-slider flex">
                             <div className="content">
-                                <h2 className="heading mt-15">Discover, find,
+                                <h2 className="heading mt-15">Открывайте, находите
                                 </h2>	
-                                <h1 className="heading mb-style"><span className="tf-text s1">Sell extraordinary</span>                                          
+                                <h1 className="heading mb-style"><span className="tf-text s1">Продавайте необычные</span>
                                 </h1>
-                                <h1 className="heading">Monster NFTs</h1>
-                                <p className="sub-heading mt-19 mb-40">Marketplace for monster character cllections non fungible token NFTs
-                                </p>
+                                <h1 className="heading">NFTs</h1>
                                 <div className="flat-bt-slider flex style2">
-                                    <Link to="/explore-01" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore
+                                    <Link to="/explore-01" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Исследуй
                                     </span></Link>
                                 </div>
                             </div>
