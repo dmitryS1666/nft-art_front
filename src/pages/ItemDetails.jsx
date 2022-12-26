@@ -85,7 +85,7 @@ const ItemDetails = () => {
     const getItems = (collectionId, itemsQty) => {
         getItemsByCollectionId(collectionId, itemsQty)
         .then(res => {
-            if(res.length > 0) {
+            if(res && res.length > 0) {
                 setCurrentCollection(res)
             }
         })
@@ -165,7 +165,7 @@ const ItemDetails = () => {
                                     <p>{item.description}</p>
                                     <div className="meta-item-details style2">
                                         <div className="item meta-price">
-                                            <span className="heading">Current Bid</span>
+                                            <span className="heading">Текущая цена</span>
                                             <div className="price">
                                                 <div className="price-box">
                                                     <h5>{item.price}</h5>
@@ -185,9 +185,9 @@ const ItemDetails = () => {
                                     <div className="flat-tabs themesflat-tabs">
                                     <Tabs>
                                         <TabList>
-                                        <Tab>Bid History</Tab>
-                                        <Tab>Info</Tab>
-                                        <Tab>Provenance</Tab>
+                                        <Tab>История ставок</Tab>
+                                        <Tab>Информация</Tab>
+                                        <Tab>Происхождение</Tab>
                                         </TabList>
 
                                         <TabPanel>

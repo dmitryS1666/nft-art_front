@@ -20,7 +20,7 @@ const LiveAuction = props => {
             <div className="themesflat-container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h2 className="tf-title-heading style-1 ct">Live Auctions</h2>
+                        <h2 className="tf-title-heading style-1 ct">Текущие аукционы</h2>
                     </div>
                     
                     {
@@ -70,13 +70,13 @@ const LiveAuctionItem = props => (
                         <img src={props.item.imgAuthor} alt="axies" />
                     </div>
                     <div className="info">
-                        <span>Creator</span>
+                        <span>Создатель</span>
                         <h6> <Link to={`/authors-${props.item.collectionId}`}>{props.item.nameAuthor}
                         </Link> </h6>
                     </div>
                 </div>
                 <div className="price">
-                    <span>Current Bid</span>
+                    <span>Текущая цена</span>
                     <h5> {props.item.price}</h5>
                 </div>
             </div>

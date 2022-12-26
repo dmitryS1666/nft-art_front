@@ -22,9 +22,9 @@ const Slider = props => {
             <Swiper
                 modules={[Navigation,  Scrollbar, A11y ]}
                     spaceBetween={0}
-                    slidesPerView={1}
-                    navigation
-                    scrollbar={{ draggable: true }}
+                    // slidesPerView={1}
+                    // navigation
+                    scrollbar={{ draggable: false }}
                 >
                 {
                     data.map((item, index) => (

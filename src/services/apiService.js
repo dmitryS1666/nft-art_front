@@ -39,7 +39,8 @@ export const getCollectionsArrayFromId = async (array) => {
     // return await newArray
 }
 
-export const getItemsByCollectionId = async (collectionId = "ETHEREUM:0x72eb1e49eded40189e7abeeca33c9deca1d1f4d5", itemsQty = 16) => {
+// 0x72eb1e49eded40189e7abeeca33c9deca1d1f4d5
+export const getItemsByCollectionId = async (collectionId = "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430", itemsQty = 16) => {
     try {
         const collectionData = await getCollectionById(collectionId)
         const res = await axios.get(`${BASE_URL}items/byCollection?collection=${collectionId}&size=${itemsQty}`)
