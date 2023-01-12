@@ -529,10 +529,10 @@ const Authors = () => {
                     <div className="flat-tabs tab-authors">
                         <div className="author-profile flex">
                             <div className="feature-profile">
-                                <img src={collection[0]?.imgAuthor} alt="Axies" className="avatar" />
+                                <img src={collection[0]?.imgAuthor} className="avatar" />
                             </div>
                             <div className="infor-profile">
-                                <span>Author Profile</span>
+                                <span>Профиль автора</span>
                                 <h2 className="title">{collection[0]? collection[0].nameAuthor : 'Trista Francis'}</h2>
                                 <p className="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
                                 <form>
@@ -540,15 +540,15 @@ const Authors = () => {
                                     <button type="button" className="btn-copycode"><i className="icon-fl-file-1"></i></button>
                                 </form>
                             </div>
-                            <div className="widget-social style-3">
-                                <ul>
-                                    <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
-                                    <li className="style-2"><Link to="#"><i className="fab fa-telegram-plane"></i></Link></li>
-                                    <li><Link to="#"><i className="fab fa-youtube"></i></Link></li>
-                                    <li className="mgr-none"><Link to="#"><i className="icon-fl-tik-tok-2"></i></Link></li>
-                                </ul>
-                                <div className="btn-profile"><Link to="/login" className="sc-button style-1 follow">Follow</Link></div>
-                            </div>
+                            {/*<div className="widget-social style-3">*/}
+                            {/*    <ul>*/}
+                            {/*        <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>*/}
+                            {/*        <li className="style-2"><Link to="#"><i className="fab fa-telegram-plane"></i></Link></li>*/}
+                            {/*        <li><Link to="#"><i className="fab fa-youtube"></i></Link></li>*/}
+                            {/*        <li className="mgr-none"><Link to="#"><i className="icon-fl-tik-tok-2"></i></Link></li>*/}
+                            {/*    </ul>*/}
+                            {/*    <div className="btn-profile"><Link to="/login" className="sc-button style-1 follow">Follow</Link></div>*/}
+                            {/*</div>*/}
                         </div>
                         <Fragment>
       <section className="tf-section sc-explore-1">
@@ -566,7 +566,7 @@ const Authors = () => {
                 >
                   <div className="card-media">
                     <Link to={`/item-details-${item.id}`}>
-                      <img src={item.img} alt="axies" />
+                      <img src={item.img} />
                     </Link>
                     <Link to="/login" className="wishlist-button heart">
                       <span className="number-like">{item.wishlist ? item.wishlist : 'wishlist 100'}</span>
@@ -582,10 +582,10 @@ const Authors = () => {
                   <div className="meta-info">
                     <div className="author">
                       <div className="avatar">
-                        <img src={item.imgAuthor ? item.imgAuthor : 'img author'} alt="axies" />
+                        <img src={item.imgAuthor ? item.imgAuthor : 'img author'} />
                       </div>
                       <div className="info">
-                        <span>Owned By</span>
+                        <span>Владелец</span>
                         <h6>
                           {" "}
                           <Link to={`/authors-${item.collectionId}`}>{item.nameAuthor}</Link>{" "}

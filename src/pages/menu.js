@@ -9,6 +9,23 @@ const menus = [
         name: 'Коллекции',
         links: '/explore',
     },
+    // {
+    //     id: 7,
+    //     name: 'Контакты',
+    //     links: '/contact'
+    // },
+    {
+        id: 8,
+        name: 'Художественные школы',
+        links: '#',
+        namesub: [
+            {
+                id: 1,
+                sub: 'Школа #1',
+                links: '/school'
+            }
+        ]
+    },
     {
         id: 5,
         name: 'Важная информация',
@@ -31,13 +48,8 @@ const menus = [
             // }
         ]
     },
-    // {
-    //     id: 7,
-    //     name: 'Контакты',
-    //     links: '/contact'
-    // },
     {
-        id: 8,
+        id: 9,
         name: 'О нас',
         links: '/about'
     }

@@ -48,9 +48,9 @@ Slider.propTypes = {
 const SliderItem = props => (
     <div className="flat-title-page" style={{backgroundImage: `url(${imgbg})`}}>
         
-        <img className="bgr-gradient gradient1" src={shape1} alt="Axies" />
-        <img className="bgr-gradient gradient2" src={shape2} alt="Axies" />
-        <img className="bgr-gradient gradient3" src={shape3} alt="Axies" />
+        <img className="bgr-gradient gradient1" src={shape1} />
+        <img className="bgr-gradient gradient2" src={shape2} />
+        <img className="bgr-gradient gradient3" src={shape3} />
         <div className="shape item-w-16"></div>
         <div className="shape item-w-22"></div>
         <div className="shape item-w-32"></div>
@@ -73,13 +73,13 @@ const SliderItem = props => (
                                     <p className="sub-heading">{props.itemData.description}
                                     </p>
                                     <div className="flat-bt-slider flex style2">
-                                        <Link to="/explore" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore
+                                        <Link to="/explore" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Исследуй
                                         </span></Link>
                                     </div>
                                 </div>
                                 <div className="image">
-                                    <img className="img-bg" src={props.item.imgbg} alt="axies" />
-                                    <img className="img-bg" src={props.itemData.img} alt="axies" />
+                                    <img className="img-bg" src={props.item.imgbg} />
+                                    <img className="img-bg" src={props.itemData.img} />
                                 </div>
                             </div>   
                         </div>					                           

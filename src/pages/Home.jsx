@@ -39,7 +39,7 @@ const Home = () => {
             <Header />
             <Slider data={heroSliderData} sliderItemData={sliderData}/>
             <TodayPicks data={currentCollection}/>
-            <PopularCollection data={currentCollection} />
+            {/*<PopularCollection data={currentCollection} />*/}
             <Create />
             <Footer />
         </div>

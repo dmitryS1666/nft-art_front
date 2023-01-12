@@ -20,7 +20,7 @@ const LiveAuction = props => {
             <div className="themesflat-container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h2 className="tf-title-heading style-1 ct">Текущие аукционы</h2>
+                        <h2 className="tf-title-heading style-1 ct">Текущие лоты</h2>
                     </div>
                     
                     {
@@ -48,26 +48,25 @@ const LiveAuctionItem = props => (
     <div className="fl-item col-xl-3 col-lg-6 col-md-6">
         <div className="sc-card-product">
             <div className="card-media">
-                <Link to={`/item-details-${props.item.id}`}><img src={props.item.img} alt="axies" /></Link>
-                <Link to="/login" className="wishlist-button heart"><span className="number-like">{props.item.wishlist}</span></Link>
-                <div className="featured-countdown">
-                    <span className="slogan"></span>
-                    <Countdown date={Date.now() + 500000000}>
-                        <span>You are good to go!</span>
-                    </Countdown>
-                </div>
-                <div className="button-place-bid">
-                    <Link to="/wallet-connect" className="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></Link>
-                </div>
+                <Link to={`/item-details-${props.item.id}`}><img src={props.item.img} /></Link>
+                {/*<Link to="/login" className="wishlist-button heart"><span className="number-like">{props.item.wishlist}</span></Link>*/}
+                {/*<div className="featured-countdown">*/}
+                {/*    <span className="slogan"></span>*/}
+                {/*    <Countdown date={Date.now() + 500000000}>*/}
+                {/*        <span>You are good to go!</span>*/}
+                {/*    </Countdown>*/}
+                {/*</div>*/}
+                {/*<div className="button-place-bid">*/}
+                {/*    <Link to="/wallet-connect" className="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></Link>*/}
+                {/*</div>*/}
             </div>
             <div className="card-title">
                 <h5><Link to={`/item-details-${props.item.id}`}>{props.item.name}</Link></h5>
-                <div className="tags">{props.item.tags}</div>
             </div>
             <div className="meta-info">
                 <div className="author">
                     <div className="avatar">
-                        <img src={props.item.imgAuthor} alt="axies" />
+                        <img src={props.item.imgAuthor} />
                     </div>
                     <div className="info">
                         <span>Создатель</span>
@@ -77,7 +76,7 @@ const LiveAuctionItem = props => (
                 </div>
                 <div className="price">
                     <span>Текущая цена</span>
-                    <h5> {props.item.price}</h5>
+                    <h5> {props.item.price} {props.item.type}</h5>
                 </div>
             </div>
         </div>

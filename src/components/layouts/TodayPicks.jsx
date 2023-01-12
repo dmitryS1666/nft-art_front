@@ -108,7 +108,7 @@ const TodayPicks = (props) => {
                 >
                   <div className="card-media">
                     <Link to={`/item-details-${item.id}`}>
-                      <img src={item.img} alt="axies" />
+                      <img src={item.img} />
                     </Link>
                     <Link to="/login" className="wishlist-button heart">
                       <span className="number-like">{item.wishlist ? item.wishlist : 'wishlist 100'}</span>
@@ -119,15 +119,14 @@ const TodayPicks = (props) => {
                     <h5 className="style2">
                       <Link to={`/item-details-${item.id}`}>"{item.name}"</Link>
                     </h5>
-                    <div className="tags">{item.tags}</div>
                   </div>
                   <div className="meta-info">
                     <div className="author">
                       <div className="avatar">
-                        <img src={item.imgAuthor ? item.imgAuthor : 'img author'} alt="axies" />
+                        <img src={item.imgAuthor ? item.imgAuthor : 'img author'} />
                       </div>
                       <div className="info">
-                        <span>Owned By</span>
+                        <span>Владелец</span>
                         <h6>
                           {" "}
                           <Link to={`/authors-${item.collectionId}`}>{item.nameAuthor}</Link>{" "}
@@ -136,7 +135,7 @@ const TodayPicks = (props) => {
                     </div>
                     <div className="price">
                       <span>Текущая цена</span>
-                      <h5> {item.price}</h5>
+                      <h5> {item.price} {item.type}</h5>
                     </div>
                   </div>
                 </div>

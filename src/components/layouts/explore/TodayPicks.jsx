@@ -107,35 +107,33 @@ const TodayPicks = (props) => {
                 >
                   <div className="card-media">
                     <Link to={`/item-details-${item.id}`}>
-                      <img src={item.img} alt="axies" />
+                      <img src={item.img} />
                     </Link>
-                    <Link to="/login" className="wishlist-button heart">
-                      <span className="number-like">{item.wishlist}</span>
-                    </Link>
+                    {/*<Link to="/login" className="wishlist-button heart">*/}
+                    {/*  <span className="number-like">{item.wishlist}</span>*/}
+                    {/*</Link>*/}
                     <div className="coming-soon">{item.feature ? item.feature : 'coming soon'}</div>
                   </div>
                   <div className="card-title">
                     <h5 className="style2">
-                      <Link to={`/item-details-${item.id}`}>"{item.title}"</Link>
+                      <Link to={`/item-details-${item.id}`}>"{item.name}"</Link>
                     </h5>
-                    <div className="tags">{item.tags}</div>
                   </div>
                   <div className="meta-info">
                     <div className="author">
                       <div className="avatar">
-                        <img src={item.imgAuthor} alt="axies" />
+                        <img src={item.imgAuthor} />
                       </div>
                       <div className="info">
-                        <span>Owned By</span>
+                        <span>Владелец</span>
                         <h6>
-                          {" "}
-                          <Link to={`/authors-${item.collectionId}`}>{item.nameAuthor}</Link>{" "}
+                          <Link to={`/authors-${item.collectionId}`}>{item.nameAuthor}</Link>
                         </h6>
                       </div>
                     </div>
                     <div className="price">
                       <span>Текущая цена</span>
-                      <h5> {item.price}</h5>
+                      <h5> {item.price} {item.type}</h5>
                     </div>
                   </div>
                 </div>
@@ -156,7 +154,7 @@ const TodayPicks = (props) => {
           </div>
         </div>
       </section>
-      <CardModal show={modalShow} onHide={() => setModalShow(false)} />
+      {/*<CardModal show={modalShow} onHide={() => setModalShow(false)} />*/}
     </Fragment>
   );
 };

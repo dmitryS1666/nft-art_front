@@ -2,17 +2,26 @@ import img1 from '../images/slider/slide_1.png';
 import img2 from '../images/slider/slide_1.png';
 import imgbg1 from '../images/slider/bg_slide_1.png'
 import imgbg2 from '../images/slider/bg_slide_1.png'
+import imgbg3 from '../images/slider/bg-top.png'
 
 
 const heroSliderData = [
     {
-        title_1: "Откройте, найдите,",
-        title_2: "продавайте",
-        title_3: "NFTs",
+        title_1: "",
+        title_2: "",
+        title_3: "",
         img: img1,
-        imgbg: imgbg1,
-        class:'left'
+        imgbg: imgbg3//,
+        // class:'left'
     },
+    // {
+    //     title_1: "Откройте, найдите,",
+    //     title_2: "продавайте",
+    //     title_3: "NFTs",
+    //     img: img1,
+    //     imgbg: imgbg1,
+    //     class:'left'
+    // },
     // {
     //     title_1: "Discover, find,",
     //     title_2: "Sell extraordinary",

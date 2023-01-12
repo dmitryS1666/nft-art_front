@@ -85,6 +85,7 @@ const ItemDetails = () => {
     const getItems = (collectionId, itemsQty) => {
         getItemsByCollectionId(collectionId, itemsQty)
         .then(res => {
+            console.log(res);
             if(res && res.length > 0) {
                 setCurrentCollection(res)
             }
@@ -117,50 +118,50 @@ const ItemDetails = () => {
             <div className="tf-section tf-item-details">
                 <div className="themesflat-container">
                     <div className="row">
-                        <div className="col-xl-6 col-md-12">
+                        <div className="col-xl-9 col-md-12">
                             <div className="content-left">
                                 <div className="media">
-                                    <img src={item.img} alt="Axies" />
+                                    <img src={item.img} />
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-6 col-md-12">
+                        <div className="col-xl-3 col-md-12">
                             <div className="content-right">
                                 <div className="sc-item-details">
                                     <h2 className="style2">{item.name} </h2>
                                     <div className="meta-item">
                                         <div className="left">
-                                            <span className="viewed eye">225</span>
-                                            <span to="/login" className="liked heart wishlist-button mg-l-8"><span className="number-like">{item.wishlist}</span></span>
+                                            <span className="viewed eye">227</span>
+                                            {/*<span to="/login" className="liked heart wishlist-button mg-l-8"><span className="number-like">{item.wishlist}</span></span>*/}
                                         </div>
-                                        <div className="right">
-                                            <Link to="#" className="share"></Link>
-                                            <Link to="#" className="option"></Link>
-                                        </div>
+                                        {/*<div className="right">*/}
+                                        {/*    <Link to="#" className="share"></Link>*/}
+                                        {/*    <Link to="#" className="option"></Link>*/}
+                                        {/*</div>*/}
                                     </div>
                                     <div className="client-infor sc-card-product">
                                         <div className="meta-info">
                                             <div className="author">
-                                                <div className="avatar">
-                                                    <img src={item.imgAuthor} alt="Axies" />
-                                                </div>
+                                                {/*<div className="avatar">*/}
+                                                {/*    <img src={item.imgAuthor}  />*/}
+                                                {/*</div>*/}
                                                 <div className="info">
-                                                    <span>Owned By</span>
-                                                    <h6> <Link to={`/authors-${item.collectionId}`}>{item.nameAuthor}</Link> </h6>
+                                                    <span>Название коллекции</span>
+                                                    <h6> <Link to={`/authors-${item.collectionId}`}>{item.collectionName}</Link> </h6>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="meta-info">
-                                            <div className="author">
-                                                <div className="avatar">
-                                                    <img src={item.imgAuthor} alt="Axies" />
-                                                </div>
-                                                <div className="info">
-                                                    <span>Create By</span>
-                                                    <h6> <Link to={`/authors-${item.collectionId}`}>{item.nameAuthor}</Link> </h6>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {/*<div className="meta-info">*/}
+                                        {/*    <div className="author">*/}
+                                        {/*        <div className="avatar">*/}
+                                        {/*            <img src={item.imgAuthor}  />*/}
+                                        {/*        </div>*/}
+                                        {/*        <div className="info">*/}
+                                        {/*            <span>Автор</span>*/}
+                                        {/*            <h6> <Link to={`/authors-${item.collectionId}`}>{item.nameAuthor}</Link> </h6>*/}
+                                        {/*        </div>*/}
+                                        {/*    </div>*/}
+                                        {/*</div>*/}
                                     </div>
                                     <p>{item.description}</p>
                                     <div className="meta-item-details style2">
@@ -169,95 +170,89 @@ const ItemDetails = () => {
                                             <div className="price">
                                                 <div className="price-box">
                                                     <h5>{item.price}</h5>
-                                                    <span>={item.priceChange}</span>
+                                                    <span>={item.type}</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="item count-down">
-                                            <span className="heading style-2">Countdown</span>
-                                            <Countdown date={Date.now() + 500000000}>
-                                                <span>You are good to go!</span>
-                                            </Countdown>
-                                        </div>
                                     </div>
-                                    <Link to="#" className="sc-button loadmore style bag fl-button pri-3" onClick={() => buyNft()}><span >Place a bid</span></Link>
+                                    <Link to="#" className="sc-button loadmore style bag fl-button pri-3" onClick={() => buyNft()}><span>Купить</span></Link>
                                     {/* <button className="sc-button loadmore style bag fl-button pri-3">Place a bid</button> */}
-                                    <div className="flat-tabs themesflat-tabs">
-                                    <Tabs>
-                                        <TabList>
-                                        <Tab>История ставок</Tab>
-                                        <Tab>Информация</Tab>
-                                        <Tab>Происхождение</Tab>
-                                        </TabList>
+                                    {/*<div className="flat-tabs themesflat-tabs">*/}
+                                    {/*<Tabs>*/}
+                                    {/*    <TabList>*/}
+                                    {/*    <Tab>История ставок</Tab>*/}
+                                    {/*    <Tab>Информация</Tab>*/}
+                                    {/*    <Tab>Происхождение</Tab>*/}
+                                    {/*    </TabList>*/}
 
-                                        <TabPanel>
-                                            <ul className="bid-history-list">
-                                            {
-                                                dataHistory.map((item, index) => (
-                                                    <li key={index} item={item}>
-                                                        <div className="content">
-                                                            <div className="client">
-                                                                <div className="sc-author-box style-2">
-                                                                    <div className="author-avatar">
-                                                                        <Link to="#">
-                                                                            <img src={item.img} alt="Axies" className="avatar" />
-                                                                        </Link>
-                                                                        <div className="badge"></div>
-                                                                    </div>
-                                                                    <div className="author-infor">
-                                                                        <div className="name">
-                                                                            <h6><Link to="/author-02">{item.name} </Link></h6> <span> place a bid</span>
-                                                                        </div>
-                                                                        <span className="time">{item.time}</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="price">
-                                                                <h5>{item.price}</h5>
-                                                                <span>= {item.priceChange}</span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                ))
-                                            }
-                                            </ul>
-                                        </TabPanel>
-                                        <TabPanel>
-                                            <ul className="bid-history-list">
-                                                    <li>
-                                                        <div className="content">
-                                                            <div className="client">
-                                                                <div className="sc-author-box style-2">
-                                                                    <div className="author-avatar">
-                                                                        <Link to="#">
-                                                                            <img src={img1} alt="Axies" className="avatar" />
-                                                                        </Link>
-                                                                        <div className="badge"></div>
-                                                                    </div>
-                                                                    <div className="author-infor">
-                                                                        <div className="name">
-                                                                            <h6> <Link to="/author-02">Mason Woodward </Link></h6> <span> place a bid</span>
-                                                                        </div>
-                                                                        <span className="time">8 hours ago</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                            </ul>
-                                        </TabPanel>
-                                        <TabPanel>
-                                            <div className="provenance">
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                                    It has survived not only five centuries, but also the leap into electronic typesetting, 
-                                                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                            </div>
-                                        </TabPanel>
-                                    </Tabs>
-                                    </div>
+                                    {/*    <TabPanel>*/}
+                                    {/*        <ul className="bid-history-list">*/}
+                                    {/*        {*/}
+                                    {/*            dataHistory.map((item, index) => (*/}
+                                    {/*                <li key={index} item={item}>*/}
+                                    {/*                    <div className="content">*/}
+                                    {/*                        <div className="client">*/}
+                                    {/*                            <div className="sc-author-box style-2">*/}
+                                    {/*                                <div className="author-avatar">*/}
+                                    {/*                                    <Link to="#">*/}
+                                    {/*                                        <img src={item.img}  className="avatar" />*/}
+                                    {/*                                    </Link>*/}
+                                    {/*                                    <div className="badge"></div>*/}
+                                    {/*                                </div>*/}
+                                    {/*                                <div className="author-infor">*/}
+                                    {/*                                    <div className="name">*/}
+                                    {/*                                        <h6><Link to="/author-02">{item.name} </Link></h6> <span> place a bid</span>*/}
+                                    {/*                                    </div>*/}
+                                    {/*                                    <span className="time">{item.time}</span>*/}
+                                    {/*                                </div>*/}
+                                    {/*                            </div>*/}
+                                    {/*                        </div>*/}
+                                    {/*                        <div className="price">*/}
+                                    {/*                            <h5>{item.price}</h5>*/}
+                                    {/*                            <span>= {item.type}</span>*/}
+                                    {/*                        </div>*/}
+                                    {/*                    </div>*/}
+                                    {/*                </li>*/}
+                                    {/*            ))*/}
+                                    {/*        }*/}
+                                    {/*        </ul>*/}
+                                    {/*    </TabPanel>*/}
+                                    {/*    <TabPanel>*/}
+                                    {/*        <ul className="bid-history-list">*/}
+                                    {/*                <li>*/}
+                                    {/*                    <div className="content">*/}
+                                    {/*                        <div className="client">*/}
+                                    {/*                            <div className="sc-author-box style-2">*/}
+                                    {/*                                <div className="author-avatar">*/}
+                                    {/*                                    <Link to="#">*/}
+                                    {/*                                        <img src={img1} className="avatar" />*/}
+                                    {/*                                    </Link>*/}
+                                    {/*                                    <div className="badge"></div>*/}
+                                    {/*                                </div>*/}
+                                    {/*                                <div className="author-infor">*/}
+                                    {/*                                    <div className="name">*/}
+                                    {/*                                        <h6> <Link to="/author-02">Mason Woodward </Link></h6> <span> place a bid</span>*/}
+                                    {/*                                    </div>*/}
+                                    {/*                                    <span className="time">8 hours ago</span>*/}
+                                    {/*                                </div>*/}
+                                    {/*                            </div>*/}
+                                    {/*                        </div>*/}
+                                    {/*                    </div>*/}
+                                    {/*                </li>*/}
+                                    {/*        </ul>*/}
+                                    {/*    </TabPanel>*/}
+                                    {/*    <TabPanel>*/}
+                                    {/*        <div className="provenance">*/}
+                                    {/*            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. */}
+                                    {/*                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, */}
+                                    {/*                when an unknown printer took a galley of type and scrambled it to make a type specimen book. */}
+                                    {/*                It has survived not only five centuries, but also the leap into electronic typesetting, */}
+                                    {/*                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, */}
+                                    {/*                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>*/}
+                                    {/*        </div>*/}
+                                    {/*    </TabPanel>*/}
+                                    {/*</Tabs>*/}
+                                    {/*</div>*/}
                                 </div>
                             </div>
                         </div>

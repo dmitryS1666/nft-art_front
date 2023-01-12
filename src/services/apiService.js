@@ -11,9 +11,9 @@ export const translateItemData = async (items, collectionData) => {
             description: item.meta.description,
             img: item.meta.content[0].url,
             tags: item.meta.tags.length > 0 ? item.meta.tags : 'bsc',
-            price: '5 ETH',
-            priceChange: ' 2500 $',
-            wishlist: "100",
+            price: item.bestSellOrder !== undefined ? item.bestSellOrder.take.value : 0,
+            type: 'ETH',
+            wishlist: "110",
             imgAuthor: '/assets/icon/profileTest.png',
             collectionId: item.collection,
             collectionName: collectionData.name,
@@ -39,8 +39,8 @@ export const getCollectionsArrayFromId = async (array) => {
     // return await newArray
 }
 
-// 0x72eb1e49eded40189e7abeeca33c9deca1d1f4d5
-export const getItemsByCollectionId = async (collectionId = "ETHEREUM:0xd07dc4262bcdbf85190c01c996b4c06a461d2430", itemsQty = 16) => {
+// 0xd07dc4262bcdbf85190c01c996b4c06a461d2430
+export const getItemsByCollectionId = async (collectionId = "ETHEREUM:0x72eb1e49eded40189e7abeeca33c9deca1d1f4d5", itemsQty = 16) => {
     try {
         const collectionData = await getCollectionById(collectionId)
         const res = await axios.get(`${BASE_URL}items/byCollection?collection=${collectionId}&size=${itemsQty}`)
@@ -54,19 +54,21 @@ export const  getItemById = async (itemId) => {
     try {
         const item = await axios.get(`${BASE_URL}items/${itemId}`)
         const collectionData = await getCollectionById(item.data.collection)
+        console.log(item);
         return {
             id: item.data.id,
             name: item.data.meta.name.slice(0, 22),
             description: item.data.meta.description,
             img: item.data.meta.content[0].url,
             tags: item.data.meta.tags.length > 0 ? item.data.meta.tags : 'bsc',
-            price: '5 ETH',
+            price: item.data.bestSellOrder !== undefined ? item.data.bestSellOrder.take.value : 0,
+            type: 'ETH',
             priceChange: ' 2500 $',
-            wishlist: "100",
+            wishlist: "110",
             imgAuthor: '/assets/icon/testIcon.png',
             collectionId: collectionData.id,
             collectionName: collectionData.name,
-            collectionImg: collectionData?.meta.content[0].url,
+            // collectionImg: collectionData?.meta.content[0].url,
             nameAuthor: collectionData.meta.name
         }
     } catch (error) {

@@ -3907,7 +3907,7 @@ section.today-picks {
 
 .tf-item-details .content-right .client-infor .meta-info,
 .tf-item-details .content-right .meta-item-details .item {
-  width: 50%;
+  width: 100%;
   margin-right: 30px;
   background: var(--primary-color7);
   border-radius: 16px;
