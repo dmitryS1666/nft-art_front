@@ -2,10 +2,8 @@ import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom'
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-import FAQ from "./FAQ";
 import {getItemsByCollectionId} from "../services/apiService";
 import TodayPicks from "../components/layouts/explore/TodayPicks";
-import Countdown from "../assets/fake-data/count_down";
 
 const School = () => {
 

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Controller, Thumbs, Scrollbar, A11y } from "swiper";
 import "swiper/swiper-bundle.css";
 
 const PopularCollection = props => {

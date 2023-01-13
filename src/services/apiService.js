@@ -14,7 +14,8 @@ export const translateItemData = async (items, collectionData) => {
             price: item.bestSellOrder !== undefined ? item.bestSellOrder.take.value : 0,
             type: 'ETH',
             wishlist: "110",
-            imgAuthor: '/assets/icon/profileTest.png',
+            imgAuthor: '/assets/icon/photo.png',
+            // imgAuthor: '/assets/icon/profileTest.png',
             collectionId: item.collection,
             collectionName: collectionData.name,
             collectionImg: collectionData?.meta?.content[0]?.url,
@@ -50,7 +51,7 @@ export const getItemsByCollectionId = async (collectionId = "ETHEREUM:0x72eb1e49
     }
 }
 
-export const  getItemById = async (itemId) => {
+export const getItemById = async (itemId) => {
     try {
         const item = await axios.get(`${BASE_URL}items/${itemId}`)
         const collectionData = await getCollectionById(item.data.collection)

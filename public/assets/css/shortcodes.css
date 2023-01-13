@@ -3610,7 +3610,7 @@ section.today-picks {
   -o-border-radius: 12px 12px 0 0;
   -moz-border-radius: 12px 12px 0 0;
   border-radius: 12px 12px 0 0;
-  padding: 2.8% 2.8% 2.5% 2.8%;
+  padding: 5%;
   position: relative;
 }
 
@@ -8441,4 +8441,31 @@ button.accordion-button {
 .slider-labels .title {
   color: #8a8aa0;
   margin-right: 3px;
+}
+
+.mainslider {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: block;
+  width: 100%;
+  float: left;
+  height: 700px;
+  background: linear-gradient(#585bcf, #5763d2);
+}
+
+.img_top {
+  width: 100%;
+  background-image: url(../../assets/images/item-background/bg-top.png);
+  background-size: contain;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.top_text {
+  position: absolute;
+  right: 16%;
+  bottom: 0;
+  display: block;
+  text-align: center;
 }

@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import CardModal from "../CardModal";
 
 const TodayPicks = (props) => {
   const data = props.data;
@@ -11,7 +10,7 @@ const TodayPicks = (props) => {
     setVisible((prevValue) => prevValue + 4);
   };
 
-  const [modalShow, setModalShow] = useState(false);
+  // const [modalShow, setModalShow] = useState(false);
 
   return (
     <Fragment>

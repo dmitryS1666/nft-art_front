@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-import {Accordion} from "react-bootstrap-accordion";
 import img1 from "../assets/images/avatar/pepel.png";
 import img2 from "../assets/images/avatar/alex.png";
 import img3 from "../assets/images/avatar/vasy.jpg";
